@@ -22,7 +22,12 @@
         "name": "CMoney AILab",
         "github": "ailabcmoney"
       },
-      "keywords": ["marketplace", "management", "plugin", "team"]
+      "keywords": [
+        "marketplace",
+        "management",
+        "plugin",
+        "team"
+      ]
     },
     {
       "name": "ops-jira",
@@ -39,7 +44,34 @@
         "name": "CMoney AILab",
         "github": "ailabcmoney"
       },
-      "keywords": ["jira", "project-management", "api", "issue-tracking"]
+      "keywords": [
+        "jira",
+        "project-management",
+        "api",
+        "issue-tracking"
+      ]
+    },
+    {
+      "name": "ops-gchat",
+      "description": "Google Chat API 操作助手 — 列出聊天室、讀取/發送訊息、私訊、搜尋空間",
+      "version": "1.0.0",
+      "category": "communication",
+      "source": {
+        "source": "github",
+        "repo": "cm-ailab-cc-plugins/plugin-ops-gchat",
+        "ref": "v1.0.0"
+      },
+      "homepage": "https://github.com/cm-ailab-cc-plugins/plugin-ops-gchat",
+      "author": {
+        "name": "CMoney AILab",
+        "github": "ailabcmoney"
+      },
+      "keywords": [
+        "google-chat",
+        "communication",
+        "api",
+        "messaging"
+      ]
     }
   ]
 }
