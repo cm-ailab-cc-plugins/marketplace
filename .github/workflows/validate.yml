@@ -1,0 +1,158 @@
+name: Validate Marketplace Plugins
+
+on:
+  pull_request:
+    paths:
+      - '.claude-plugin/marketplace.json'
+
+jobs:
+  validate-marketplace:
+    name: Validate marketplace.json structure
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+
+      - name: Validate marketplace.json structure
+        run: |
+          MARKETPLACE=".claude-plugin/marketplace.json"
+
+          # 驗證 JSON 格式
+          if ! jq empty "$MARKETPLACE" 2>/dev/null; then
+            echo "::error::marketplace.json 不是有效的 JSON"
+            exit 1
+          fi
+          echo "✓ marketplace.json 是有效的 JSON"
+
+          # 驗證必要欄位
+          for field in name owner metadata plugins; do
+            if ! jq -e ".$field" "$MARKETPLACE" >/dev/null 2>&1; then
+              echo "::error::marketplace.json 缺少必要欄位: $field"
+              exit 1
+            fi
+          done
+          echo "✓ marketplace.json 包含所有必要欄位"
+
+          # 驗證每個 plugin entry 有 name, source.repo, source.ref, description
+          PLUGIN_COUNT=$(jq '.plugins | length' "$MARKETPLACE")
+          echo "共 $PLUGIN_COUNT 個 plugin"
+
+          for i in $(seq 0 $(( PLUGIN_COUNT - 1 ))); do
+            PNAME=$(jq -r ".plugins[$i].name // empty" "$MARKETPLACE")
+            PREPO=$(jq -r ".plugins[$i].source.repo // empty" "$MARKETPLACE")
+            PREF=$(jq -r ".plugins[$i].source.ref // empty" "$MARKETPLACE")
+            PDESC=$(jq -r ".plugins[$i].description // empty" "$MARKETPLACE")
+
+            if [[ -z "$PNAME" ]]; then
+              echo "::error::plugins[$i] 缺少 name"
+              exit 1
+            fi
+            if [[ -z "$PREPO" ]]; then
+              echo "::error::plugins[$i] ($PNAME) 缺少 source.repo"
+              exit 1
+            fi
+            if [[ -z "$PREF" ]]; then
+              echo "::error::plugins[$i] ($PNAME) 缺少 source.ref"
+              exit 1
+            fi
+            if [[ -z "$PDESC" ]]; then
+              echo "::error::plugins[$i] ($PNAME) 缺少 description"
+              exit 1
+            fi
+            echo "  ✓ plugins[$i] ($PNAME) 結構完整"
+          done
+
+          echo "✓ 所有 plugin entries 結構驗證通過"
+
+  validate-changed-plugins:
+    name: Validate changed/added plugins
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+
+      - name: Get base marketplace.json
+        run: |
+          git fetch origin ${{ github.base_ref }} --depth=1
+          git show origin/${{ github.base_ref }}:.claude-plugin/marketplace.json > /tmp/base-marketplace.json 2>/dev/null || echo '{"plugins":[]}' > /tmp/base-marketplace.json
+
+      - name: Diff and validate changed plugins
+        run: |
+          MARKETPLACE=".claude-plugin/marketplace.json"
+          BASE="/tmp/base-marketplace.json"
+
+          # 取得目前和基底的 plugin 名稱列表
+          CURRENT_PLUGINS=$(jq -r '.plugins[].name // empty' "$MARKETPLACE" 2>/dev/null | sort)
+          BASE_PLUGINS=$(jq -r '.plugins[].name // empty' "$BASE" 2>/dev/null | sort)
+
+          # 找出新增或變更的 plugins
+          CHANGED_PLUGINS=""
+
+          while IFS= read -r plugin_name; do
+            [[ -z "$plugin_name" ]] && continue
+
+            # 取得目前版本的 plugin 資訊
+            CURRENT_ENTRY=$(jq -r --arg name "$plugin_name" '.plugins[] | select(.name == $name)' "$MARKETPLACE")
+            BASE_ENTRY=$(jq -r --arg name "$plugin_name" '.plugins[] | select(.name == $name)' "$BASE" 2>/dev/null)
+
+            # 如果 plugin 是新增的或有變更
+            if [[ -z "$BASE_ENTRY" ]] || [[ "$CURRENT_ENTRY" != "$BASE_ENTRY" ]]; then
+              CHANGED_PLUGINS="$CHANGED_PLUGINS $plugin_name"
+            fi
+          done <<< "$CURRENT_PLUGINS"
+
+          if [[ -z "$CHANGED_PLUGINS" ]]; then
+            echo "沒有變更的 plugins，跳過驗證"
+            exit 0
+          fi
+
+          echo "偵測到變更的 plugins:$CHANGED_PLUGINS"
+          VALIDATION_FAILED=0
+
+          for plugin_name in $CHANGED_PLUGINS; do
+            echo ""
+            echo "=== 驗證 plugin: $plugin_name ==="
+
+            # 取得 plugin 資訊
+            REPO=$(jq -r --arg name "$plugin_name" '.plugins[] | select(.name == $name) | .source.repo' "$MARKETPLACE")
+            REF=$(jq -r --arg name "$plugin_name" '.plugins[] | select(.name == $name) | .source.ref' "$MARKETPLACE")
+
+            if [[ -z "$REPO" || -z "$REF" ]]; then
+              echo "::error::plugin $plugin_name 缺少 source.repo 或 source.ref"
+              VALIDATION_FAILED=1
+              continue
+            fi
+
+            # Clone plugin repo
+            PLUGIN_DIR="/tmp/plugin-$plugin_name"
+            rm -rf "$PLUGIN_DIR"
+
+            echo "Cloning $REPO@$REF..."
+            if ! git clone --depth=1 --branch="$REF" "https://github.com/$REPO.git" "$PLUGIN_DIR" 2>/dev/null; then
+              echo "::error::無法 clone $REPO@$REF"
+              VALIDATION_FAILED=1
+              continue
+            fi
+
+            # 取得 repo 名稱（最後一段路徑）
+            REPO_NAME=$(basename "$REPO")
+
+            # 執行驗證腳本
+            if ! bash scripts/validate-plugin.sh "$PLUGIN_DIR" "$REPO_NAME" "$REF"; then
+              echo "::error::plugin $plugin_name 驗證失敗"
+              VALIDATION_FAILED=1
+            else
+              echo "✓ plugin $plugin_name 驗證通過"
+            fi
+
+            rm -rf "$PLUGIN_DIR"
+          done
+
+          if (( VALIDATION_FAILED > 0 )); then
+            echo ""
+            echo "::error::部分 plugin 驗證失敗"
+            exit 1
+          fi
+
+          echo ""
+          echo "✓ 所有變更的 plugins 驗證通過"
