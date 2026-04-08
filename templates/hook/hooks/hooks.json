@@ -1,0 +1,8 @@
+{
+  "hooks": [
+    {
+      "event": "__EVENT_TYPE__",
+      "command": "echo 'TODO: implement hook'"
+    }
+  ]
+}

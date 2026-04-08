@@ -1,0 +1,11 @@
+{
+  "name": "__PLUGIN_NAME__",
+  "version": "1.0.0",
+  "type": "agent",
+  "description": "__DESCRIPTION__",
+  "keywords": ["__KEYWORD1__", "__KEYWORD2__"],
+  "author": {
+    "name": "__AUTHOR_NAME__",
+    "github": "__GITHUB_USER__"
+  }
+}
