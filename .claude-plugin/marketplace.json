@@ -213,30 +213,6 @@
       ]
     },
     {
-      "name": "anya-query",
-      "description": "用中文查詢 Anya 使用者行為資料 — OAuth 授權後讓 Claude Code 在 CLI 直接生 Spark SQL 查 Anya，集中 audit log",
-      "version": "0.1.2",
-      "category": "analytics",
-      "source": {
-        "source": "github",
-        "repo": "cm-ailab-cc-plugins/plugin-anya-query",
-        "ref": "v0.1.2"
-      },
-      "homepage": "https://github.com/cm-ailab-cc-plugins/plugin-anya-query",
-      "author": {
-        "name": "CMoney AILab",
-        "github": "ailabcmoney"
-      },
-      "keywords": [
-        "anya",
-        "analytics",
-        "sql",
-        "query",
-        "cmoney",
-        "audit"
-      ]
-    },
-    {
       "name": "ailab-cloudrun-deploy",
       "description": "部署網頁或後端服務到 Cloud Run，適合非工程師使用，全自動引導",
       "type": "skill",
