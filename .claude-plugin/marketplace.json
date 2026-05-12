@@ -303,6 +303,29 @@
         "upload",
         "gcp"
       ]
+    },
+    {
+      "name": "cmoney-data",
+      "description": "Anya 使用者行為 + Readmo GA4 整合查詢工具，Bearer Token + audit log",
+      "version": "0.2.0",
+      "category": "analytics",
+      "source": {
+        "source": "github",
+        "repo": "cm-ailab-cc-plugins/plugin-cmoney-data",
+        "ref": "v0.2.0"
+      },
+      "homepage": "https://github.com/cm-ailab-cc-plugins/plugin-cmoney-data",
+      "author": {
+        "name": "Kevin Chang",
+        "github": "kevinchang-art"
+      },
+      "keywords": [
+        "anya",
+        "ga4",
+        "readmo",
+        "analytics",
+        "spark-sql"
+      ]
     }
   ]
 }
