@@ -303,6 +303,29 @@
         "analytics",
         "spark-sql"
       ]
+    },
+    {
+      "name": "tw-income-tax",
+      "description": "台灣綜合所得稅申報知識與流程：2026/2027 申報年度免稅額、扣除額、累進級距、股利課稅、基本生活費差額；搭配胡碩勻《節稅的布局》圖表索引",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": {
+        "source": "github",
+        "repo": "cm-ailab-cc-plugins/plugin-tw-income-tax",
+        "ref": "v1.0.0"
+      },
+      "homepage": "https://github.com/cm-ailab-cc-plugins/plugin-tw-income-tax",
+      "author": {
+        "name": "ailabcmoney",
+        "github": "ailabcmoney"
+      },
+      "keywords": [
+        "tax",
+        "taiwan",
+        "tax-filing",
+        "綜所稅",
+        "節稅"
+      ]
     }
   ]
 }
