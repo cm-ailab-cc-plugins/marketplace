@@ -305,15 +305,15 @@
       ]
     },
     {
-      "name": "ddd-backend",
+      "name": "ailab-ddd-backend",
       "description": "CMoney AILab 團隊 DDD 架構規範 — 自動套用於後端專案（C# / Go / 其他），含四層依賴方向、介面歸屬表、Top 10 MUST 規則、6 篇 references 與 4 個 slash commands。",
       "type": "skill",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "category": "development",
       "source": {
         "source": "github",
         "repo": "cm-ailab-cc-plugins/plugin-ailab-ddd-backend",
-        "ref": "v0.1.0"
+        "ref": "v0.1.1"
       },
       "homepage": "https://github.com/cm-ailab-cc-plugins/plugin-ailab-ddd-backend",
       "author": {
@@ -321,7 +321,7 @@
         "github": "ailabcmoney"
       },
       "keywords": [
-        "ddd-backend",
+        "ailab-ddd-backend",
         "ddd",
         "architecture",
         "domain-driven-design",
