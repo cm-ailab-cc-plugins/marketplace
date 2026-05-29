@@ -99,12 +99,12 @@
     {
       "name": "mvvmci-ios",
       "description": "iOS MVVM-C+I 架構規範 — Coordinator + MVVM + Interactor 分層原則與程式碼範本",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "category": "development",
       "source": {
         "source": "github",
         "repo": "cm-ailab-cc-plugins/plugin-mvvmci-ios",
-        "ref": "v1.0.1"
+        "ref": "v1.0.2"
       },
       "homepage": "https://github.com/cm-ailab-cc-plugins/plugin-mvvmci-ios",
       "author": {
