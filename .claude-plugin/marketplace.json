@@ -355,6 +355,30 @@
         "lvr",
         "pcc"
       ]
+    },
+    {
+      "name": "cmoney-new-tax-product",
+      "description": "建立稅務 PDF 收集型新產品（從 tax-product-template scaffold 出獨立 repo + Cloud Run + DB，一條龍引導，適合非工程師）",
+      "type": "skill",
+      "version": "1.0.0",
+      "category": "development",
+      "source": {
+        "source": "github",
+        "repo": "cm-ailab-cc-plugins/plugin-cmoney-new-tax-product",
+        "ref": "v1.0.0"
+      },
+      "homepage": "https://github.com/cm-ailab-cc-plugins/plugin-cmoney-new-tax-product",
+      "keywords": [
+        "scaffold",
+        "tax",
+        "pdf",
+        "cmoney",
+        "new-product"
+      ],
+      "author": {
+        "name": "tax-better-team",
+        "github": "ailabcmoney"
+      }
     }
   ]
 }
