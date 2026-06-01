@@ -331,6 +331,30 @@
         "clean-architecture",
         "backend"
       ]
+    },
+    {
+      "name": "twinkle-hub",
+      "description": "Twinkle Hub — 台灣開放資料單一 MCP 端點：一條龍接入 52,960+ 政府開放資料集、32 個台灣在地工具、10 個官方資料 Skill（實價登錄/政府採購/立法院/司法/國考/專利/GIS/交通）。含 skill 操作手冊 + 自動註冊 MCP server（key 走環境變數，不含 secret）。",
+      "version": "1.0.1",
+      "category": "development",
+      "source": {
+        "source": "github",
+        "repo": "cm-ailab-cc-plugins/plugin-twinkle-hub",
+        "ref": "v1.0.1"
+      },
+      "homepage": "https://github.com/cm-ailab-cc-plugins/plugin-twinkle-hub",
+      "author": {
+        "name": "CMoney AILab",
+        "github": "ailabcmoney"
+      },
+      "keywords": [
+        "taiwan",
+        "opendata",
+        "mcp",
+        "twinkle-hub",
+        "lvr",
+        "pcc"
+      ]
     }
   ]
 }
