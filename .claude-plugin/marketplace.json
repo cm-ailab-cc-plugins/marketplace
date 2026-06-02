@@ -74,16 +74,16 @@
       ]
     },
     {
-      "name": "ios-startup",
-      "description": "iOS 專案起手式產生器 — 含 27 個 Swift Extension 與 10 個 APIEngine 網路層模板檔案",
-      "version": "1.0.0",
+      "name": "cm-ios-bootstrap",
+      "description": "CMoney iOS 完整專案 bootstrap — 4 個 target（主 App / DEV / Tests / NSE）、5 大 Adapter（CMMemberKit / CMConfigModel / CMAnalyticsKit / CMNotificationModel / CMSwiftBackendAPI）、完整登入流程、NotificationServiceExtension、27 Extensions、APIEngine（Alamofire + Firebase Performance）。由 xcodegen + CocoaPods 驅動。",
+      "version": "1.2.0",
       "category": "development",
       "source": {
         "source": "github",
-        "repo": "cm-ailab-cc-plugins/plugin-ios-startup",
-        "ref": "v1.0.0"
+        "repo": "cm-ailab-cc-plugins/plugin-cm-ios-bootstrap",
+        "ref": "v1.2.0"
       },
-      "homepage": "https://github.com/cm-ailab-cc-plugins/plugin-ios-startup",
+      "homepage": "https://github.com/cm-ailab-cc-plugins/plugin-cm-ios-bootstrap",
       "author": {
         "name": "kevinkevinkuo",
         "github": "kevinkevinkuo"
