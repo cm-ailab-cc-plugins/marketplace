@@ -74,16 +74,16 @@
       ]
     },
     {
-      "name": "ios-startup",
+      "name": "cm-ios-bootstrap",
       "description": "iOS 專案起手式產生器 — 含 27 個 Swift Extension 與 10 個 APIEngine 網路層模板檔案",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "category": "development",
       "source": {
         "source": "github",
-        "repo": "cm-ailab-cc-plugins/plugin-ios-startup",
-        "ref": "v1.1.0"
+        "repo": "cm-ailab-cc-plugins/plugin-cm-ios-bootstrap",
+        "ref": "v1.2.0"
       },
-      "homepage": "https://github.com/cm-ailab-cc-plugins/plugin-ios-startup",
+      "homepage": "https://github.com/cm-ailab-cc-plugins/plugin-cm-ios-bootstrap",
       "author": {
         "name": "kevinkevinkuo",
         "github": "kevinkevinkuo"
