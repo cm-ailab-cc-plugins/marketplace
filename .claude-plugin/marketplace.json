@@ -355,6 +355,29 @@
         "lvr",
         "pcc"
       ]
+    },
+    {
+      "name": "screen-mender",
+      "description": "逐畫面修復 App 截圖看得見的視覺跑版缺陷，雙平台 iOS/Android 自動偵測，一畫面一個小 MR 的完整修復閉環",
+      "version": "0.1.0",
+      "category": "development",
+      "source": {
+        "source": "github",
+        "repo": "cm-ailab-cc-plugins/plugin-screen-mender",
+        "ref": "v0.1.0"
+      },
+      "homepage": "https://github.com/cm-ailab-cc-plugins/plugin-screen-mender",
+      "author": {
+        "name": "CMoney AILab",
+        "github": "ailabcmoney"
+      },
+      "keywords": [
+        "screenshot",
+        "ui-testing",
+        "ios",
+        "android",
+        "visual-regression"
+      ]
     }
   ]
 }
