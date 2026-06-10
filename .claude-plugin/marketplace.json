@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "cm-ailab-cc-plugins",
-  "description": "CMoney AILab 團隊共用的 Claude Code Plugin Marketplace",
+  "description": "CMoney AILab ???梁??Claude Code Plugin Marketplace",
   "owner": {
     "name": "CMoney AILab",
     "email": "ailab@cmoney.com.tw"
@@ -9,7 +9,7 @@
   "plugins": [
     {
       "name": "cm-ailab-mp",
-      "description": "Team Marketplace 管理工具 — 發佈、搜尋、安裝、更新 plugin",
+      "description": "Team Marketplace 蝞∠?撌亙 ???潔???撠?鋆??plugin",
       "version": "1.2.0",
       "category": "productivity",
       "source": {
@@ -31,7 +31,7 @@
     },
     {
       "name": "ops-jira",
-      "description": "Jira API 操作助手 — 查詢/建立/更新 issue、JQL 搜尋、狀態轉換、留言、Sprint 管理",
+      "description": "Jira API ???拇? ???亥岷/撱箇?/?湔 issue?QL ????????閮?print 蝞∠?",
       "version": "1.0.0",
       "category": "productivity",
       "source": {
@@ -53,7 +53,7 @@
     },
     {
       "name": "ops-gchat",
-      "description": "Google Chat API 操作助手 — 列出聊天室、讀取/發送訊息、私訊、搜尋空間",
+      "description": "Google Chat API ???拇? ????予摰扎????潮??胯?閮?撠征??,
       "version": "1.0.0",
       "category": "communication",
       "source": {
@@ -75,7 +75,7 @@
     },
     {
       "name": "cm-ios-bootstrap",
-      "description": "CMoney iOS 完整專案 bootstrap — 4 個 target（主 App / DEV / Tests / NSE）、5 大 Adapter（CMMemberKit / CMConfigModel / CMAnalyticsKit / CMNotificationModel / CMSwiftBackendAPI）、完整登入流程、NotificationServiceExtension、27 Extensions、APIEngine（Alamofire + Firebase Performance）。由 xcodegen + CocoaPods 驅動。",
+      "description": "CMoney iOS 摰撠? bootstrap ??4 ??target嚗蜓 App / DEV / Tests / NSE嚗? 憭?Adapter嚗MMemberKit / CMConfigModel / CMAnalyticsKit / CMNotificationModel / CMSwiftBackendAPI嚗??渡?交?蝔otificationServiceExtension??7 Extensions?PIEngine嚗lamofire + Firebase Performance嚗 xcodegen + CocoaPods 撽???,
       "version": "1.2.0",
       "category": "development",
       "source": {
@@ -98,7 +98,7 @@
     },
     {
       "name": "mvvmci-ios",
-      "description": "iOS MVVM-C+I 架構規範 — Coordinator + MVVM + Interactor 分層原則與程式碼範本",
+      "description": "iOS MVVM-C+I ?嗆?閬? ??Coordinator + MVVM + Interactor ?惜????撘Ⅳ蝭",
       "version": "1.0.2",
       "category": "development",
       "source": {
@@ -121,7 +121,7 @@
     },
     {
       "name": "ios-cmanalyticskit",
-      "description": "CMAnalyticsKit 埋點與 OneLink 使用指南 — 事件追蹤、計時事件、頁面瀏覽、深度連結處理",
+      "description": "CMAnalyticsKit ????OneLink 雿輻?? ??鈭辣餈質馱????隞嗚??Ｙ汗?楛摨阡????",
       "version": "1.0.0",
       "category": "development",
       "source": {
@@ -144,7 +144,7 @@
     },
     {
       "name": "ios-audio",
-      "description": "iOS 錄音與播放功能指南 — AudioRecorderProvider + AudioPlayerProvider + EZAudio 整合",
+      "description": "iOS ???曉??賣?????AudioRecorderProvider + AudioPlayerProvider + EZAudio ?游?",
       "version": "1.0.0",
       "category": "development",
       "source": {
@@ -167,7 +167,7 @@
     },
     {
       "name": "ios-cmmemberkit-login",
-      "description": "CMMemberKit 登入整合 — 自動登入、手動登入、登出、JWT Token 管理，含 21 個模板檔案",
+      "description": "CMMemberKit ?餃?游? ???芸??餃????乓?箝WT Token 蝞∠?嚗 21 ?芋?踵?獢?,
       "version": "1.0.0",
       "category": "development",
       "source": {
@@ -190,7 +190,7 @@
     },
     {
       "name": "gen-short",
-      "description": "AI 短影片自動生成器 — 從網頁/GitHub repo/主題自動產出 60-90 秒 YouTube Shorts，含 AI 語音、AI 圖片、Remotion 動畫合成",
+      "description": "AI ?剖蔣???? ??敺雯??GitHub repo/銝駁??芸??Ｗ 60-90 蝘?YouTube Shorts嚗 AI 隤?I ???emotion ???",
       "version": "1.0.0",
       "category": "content-creation",
       "source": {
@@ -214,7 +214,7 @@
     },
     {
       "name": "ailab-cloudrun-deploy",
-      "description": "部署網頁或後端服務到 Cloud Run，適合非工程師使用，全自動引導",
+      "description": "?函蔡蝬脤???蝡舀?? Cloud Run嚗??撌亦?撣思蝙?剁??刻??撠?,
       "type": "skill",
       "version": "1.4.2",
       "category": "development",
@@ -236,7 +236,7 @@
     },
     {
       "name": "ailab-postgres-connect",
-      "description": "為某個服務在公司 GKE 上建立專屬 PostgreSQL DB 與 user，建好後可選擇是否注入到 Cloud Run；dev / prod 環境流程一致。",
+      "description": "?箸?????砍 GKE 銝遣蝡?撅?PostgreSQL DB ??user嚗遣憟賢??舫??行釣?亙 Cloud Run嚗ev / prod ?啣?瘚?銝?氬?,
       "type": "skill",
       "version": "1.2.0",
       "category": "development",
@@ -261,7 +261,7 @@
     },
     {
       "name": "ailab-image-upload",
-      "description": "把產品接上 CMoney 圖片上傳服務，自動處理憑證與環境變數，適合非工程師使用，全自動引導",
+      "description": "??銝?CMoney ??銝??嚗????霅??啣?霈嚗??撌亦?撣思蝙?剁??刻??撠?,
       "version": "1.0.0",
       "category": "development",
       "source": {
@@ -282,13 +282,13 @@
     },
     {
       "name": "cmoney-data",
-      "description": "Anya 使用者行為 + 全站 GA4 property + GSC（Search Console）+ Threads 帳號成效整合查詢工具，Bearer Token + audit log",
-      "version": "0.6.0",
+      "description": "Anya 雿輻????+ ?函? GA4 property + GSC嚗earch Console嚗? Threads 撣唾????游??亥岷撌亙嚗earer Token + audit log",
+      "version": "0.6.1",
       "category": "analytics",
       "source": {
         "source": "github",
         "repo": "cm-ailab-cc-plugins/plugin-cmoney-data",
-        "ref": "v0.6.0"
+        "ref": "v0.6.1"
       },
       "homepage": "https://github.com/cm-ailab-cc-plugins/plugin-cmoney-data",
       "author": {
@@ -308,7 +308,7 @@
     },
     {
       "name": "ailab-ddd-backend",
-      "description": "CMoney AILab 團隊 DDD 架構規範 — 自動套用於後端專案（C# / Go / 其他），含四層依賴方向、介面歸屬表、Top 10 MUST 規則、6 篇 references 與 4 個 slash commands。",
+      "description": "CMoney AILab ?? DDD ?嗆?閬? ???芸?憟?澆?蝡臬?獢?C# / Go / ?嗡?嚗??怠?撅支?鞈湔???Ｘ飛撅祈”?op 10 MUST 閬??? 蝭?references ??4 ??slash commands??,
       "type": "skill",
       "version": "0.1.1",
       "category": "development",
@@ -334,7 +334,7 @@
     },
     {
       "name": "twinkle-hub",
-      "description": "Twinkle Hub — 台灣開放資料單一 MCP 端點：一條龍接入 52,960+ 政府開放資料集、32 個台灣在地工具、10 個官方資料 Skill（實價登錄/政府採購/立法院/司法/國考/專利/GIS/交通）。含 skill 操作手冊 + 自動註冊 MCP server（key 走環境變數，不含 secret）。",
+      "description": "Twinkle Hub ???啁?鞈??桐? MCP 蝡舫?嚗?璇??亙 52,960+ ?踹??鞈???2 ????啣極?瑯?0 ???寡???Skill嚗祕?寧???踹??∟頃/蝡????豢?/??撠/GIS/鈭日?? skill ???? + ?芸?閮餃? MCP server嚗ey 韏啁憓??賂?銝 secret嚗?,
       "version": "1.0.1",
       "category": "development",
       "source": {
@@ -358,7 +358,7 @@
     },
     {
       "name": "screen-mender",
-      "description": "逐畫面修復 App 截圖看得見的視覺跑版缺陷，雙平台 iOS/Android 自動偵測，一畫面一個小 MR 的完整修復閉環",
+      "description": "??Ｖ耨敺?App ?芸???閬?閬死頝?蝻粹嚗?撟喳 iOS/Android ?芸??菜葫嚗??恍銝?? MR ???港耨敺拚???,
       "type": "mixed",
       "version": "0.1.0",
       "category": "development",
