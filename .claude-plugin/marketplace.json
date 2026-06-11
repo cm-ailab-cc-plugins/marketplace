@@ -381,25 +381,25 @@
       ]
     },
     {
-      "name": "toastenglish-strings",
-      "description": "ToastEnglish 專屬字串 CRUD 工具組：translation-backend 操作翻譯後台（SSOT），update-strings 同步回 iOS/Android 本地字串資源",
+      "name": "toastenglish-dev",
+      "description": "ToastEnglish 雙平台開發配套 plugin——開發本專案任一平台前先安裝。目前提供字串 CRUD 工具組：translation-backend 操作翻譯後台（SSOT），update-strings 同步回 iOS/Android 本地資源；未來擴充其他開發設定與規範。",
       "version": "0.1.0",
       "category": "development",
       "source": {
         "source": "github",
-        "repo": "cm-ailab-cc-plugins/plugin-toastenglish-strings",
+        "repo": "cm-ailab-cc-plugins/plugin-toastenglish-dev",
         "ref": "v0.1.0"
       },
-      "homepage": "https://github.com/cm-ailab-cc-plugins/plugin-toastenglish-strings",
+      "homepage": "https://github.com/cm-ailab-cc-plugins/plugin-toastenglish-dev",
       "author": {
         "name": "CMoney AILab",
         "github": "KerryChang-dev"
       },
       "keywords": [
         "toastenglish",
+        "dev-toolkit",
         "i18n",
         "translation",
-        "strings",
         "ios",
         "android"
       ]
