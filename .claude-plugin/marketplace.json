@@ -381,23 +381,23 @@
       ]
     },
     {
-      "name": "toastenglish-dev",
-      "description": "ToastEnglish 雙平台開發配套 plugin——開發本專案任一平台前先安裝。目前提供字串 CRUD 工具組：translation-backend 操作翻譯後台（SSOT），update-strings 同步回 iOS/Android 本地資源；未來擴充其他開發設定與規範。",
+      "name": "toast-english",
+      "description": "ToastEnglish（吐司英文）雙平台開發配套 plugin——開發本專案任一平台前先安裝。目前提供字串 CRUD 工具組：translation-backend 操作翻譯後台（SSOT），update-strings 同步回 iOS/Android 本地資源；未來的專案 skill / agent 都收在本 plugin 之下。",
       "version": "0.1.0",
       "category": "development",
       "source": {
         "source": "github",
-        "repo": "cm-ailab-cc-plugins/plugin-toastenglish-dev",
+        "repo": "cm-ailab-cc-plugins/plugin-toast-english",
         "ref": "v0.1.0"
       },
-      "homepage": "https://github.com/cm-ailab-cc-plugins/plugin-toastenglish-dev",
+      "homepage": "https://github.com/cm-ailab-cc-plugins/plugin-toast-english",
       "author": {
         "name": "CMoney AILab",
         "github": "KerryChang-dev"
       },
       "keywords": [
+        "toast-english",
         "toastenglish",
-        "dev-toolkit",
         "i18n",
         "translation",
         "ios",
