@@ -403,6 +403,33 @@
         "ios",
         "android"
       ]
+    },
+    {
+      "name": "gcp-monitoring-diagnose",
+      "description": "用 gcloud + Cloud Monitoring API 對任意 GCP 專案做被動根因排查 — 告警驅動掃描(重放 PromQL/threshold 條件)、下鑽 time series 定位根因、確認後安全修復(身分 guard + audit 留痕)",
+      "version": "0.1.0",
+      "category": "analytics",
+      "source": {
+        "source": "github",
+        "repo": "cm-ailab-cc-plugins/plugin-gcp-monitoring-diagnose",
+        "ref": "v0.1.0"
+      },
+      "homepage": "https://github.com/cm-ailab-cc-plugins/plugin-gcp-monitoring-diagnose",
+      "author": {
+        "name": "CMoney AILab",
+        "github": "ailabcmoney"
+      },
+      "keywords": [
+        "gcp",
+        "google-cloud",
+        "monitoring",
+        "observability",
+        "diagnose",
+        "troubleshooting",
+        "alerting",
+        "gke",
+        "sre"
+      ]
     }
   ]
 }
