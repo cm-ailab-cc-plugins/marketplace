@@ -382,13 +382,13 @@
     },
     {
       "name": "toast-english",
-      "description": "ToastEnglish（吐司英文）雙平台開發配套 plugin——開發本專案任一平台前先安裝。目前提供字串 CRUD 工具組：manage-translations 操作翻譯後台（SSOT），update-string-resources 把後台字串同步回 iOS/Android 本地資源；未來的專案 skill / agent 都收在本 plugin 之下。",
-      "version": "0.1.0",
+      "description": "ToastEnglish（吐司英文）雙平台開發配套 plugin——開發本專案任一平台前先安裝。提供 setup（雙平台 clone + 切 develop）、manage-translations（翻譯後台 SSOT CRUD）、update-string-resources（後台字串同步回 iOS/Android 本地）三個 skill；專案 skill / agent 都收在本 plugin 之下。",
+      "version": "0.2.0",
       "category": "development",
       "source": {
         "source": "github",
         "repo": "cm-ailab-cc-plugins/plugin-toast-english",
-        "ref": "v0.1.0"
+        "ref": "v0.2.0"
       },
       "homepage": "https://github.com/cm-ailab-cc-plugins/plugin-toast-english",
       "author": {
