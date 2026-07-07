@@ -430,6 +430,29 @@
         "gke",
         "sre"
       ]
+    },
+    {
+      "name": "ad-ccn-engine",
+      "description": "通用短影音投放素材切角＆腳本引擎——貼上產品資訊即用 CCN 框架自動產生 4 種 TA、切角庫與投廣策略，記憶檔避免重複生成",
+      "version": "1.0.0",
+      "category": "content-creation",
+      "source": {
+        "source": "github",
+        "repo": "cm-ailab-cc-plugins/plugin-ad-ccn-engine",
+        "ref": "v1.0.0"
+      },
+      "homepage": "https://github.com/cm-ailab-cc-plugins/plugin-ad-ccn-engine",
+      "author": {
+        "name": "daisywang-cmoneywork",
+        "github": "daisywang-cmoneywork"
+      },
+      "keywords": [
+        "ad",
+        "creative",
+        "short-video",
+        "ccn",
+        "marketing"
+      ]
     }
   ]
 }
