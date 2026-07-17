@@ -216,12 +216,12 @@
       "name": "ailab-cloudrun-deploy",
       "description": "部署網頁或後端服務到 Cloud Run，適合非工程師使用，全自動引導",
       "type": "skill",
-      "version": "1.4.2",
+      "version": "1.4.3",
       "category": "development",
       "source": {
         "source": "github",
         "repo": "cm-ailab-cc-plugins/plugin-ailab-cloudrun-deploy",
-        "ref": "v1.4.2"
+        "ref": "v1.4.3"
       },
       "homepage": "https://github.com/cm-ailab-cc-plugins/plugin-ailab-cloudrun-deploy",
       "keywords": [
